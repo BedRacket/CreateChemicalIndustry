@@ -1,10 +1,12 @@
 package org.bedracket.creatchemicalindustry.init;
 
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
+import org.bedracket.creatchemicalindustry.fluid.EthanolFluid;
 
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -14,6 +16,12 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(ForgeRegistries.FLUIDS,
                     CreateCheicalIndustry.MODID);
+
+    public static final RegistryObject<FlowingFluid> ETHANOL =
+            register("ethanol_fluid", EthanolFluid.Source::new);
+
+    public static final RegistryObject<FlowingFluid> FLOWING_ETHANOL =
+            register("ethanol_fluid", EthanolFluid.Flowing::new);
 
     /**
      * Used for registry fluids
