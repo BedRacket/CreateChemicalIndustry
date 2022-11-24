@@ -9,6 +9,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.bedracket.creatchemicalindustry.init.ModConfigs;
+import org.bedracket.creatchemicalindustry.init.ModFluids;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 import org.slf4j.Logger;
 
@@ -24,5 +25,6 @@ public class CreateCheicalIndustry {
         ModConfigs.loadConfig(ModConfigs.SPEC, FMLPaths.CONFIGDIR.get().resolve("create_chemical_industry.toml"));
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModFluids.FLUIDS.register(modEventBus);
     }
 }

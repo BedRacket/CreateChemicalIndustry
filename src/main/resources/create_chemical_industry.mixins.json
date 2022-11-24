@@ -5,6 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "create_chemical_industry.refmap.json",
   "mixins": [
+    "MixinForgeHooks",
+    "MixinItemEntity",
     "MixinServerLevel"
   ],
   "injectors": {
