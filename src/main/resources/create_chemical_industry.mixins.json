@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.bedracket.creatchemicalindustry.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "create_chemical_industry.refmap.json",
+  "mixins": [
+    "MixinServerLevel"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -146,9 +146,9 @@ jar {
 jar.finalizedBy('reobfJar')
 
 mixin {
-    add sourceSets.main, "createchemicalindustry.refmap.json"
+    add sourceSets.main, "create_chemical_industry.refmap.json"
 
-    config "createchemicalindustry.mixins.json"
+    config "create_chemical_industry.mixins.json"
 }
 
 tasks.withType(JavaCompile).configureEach {
