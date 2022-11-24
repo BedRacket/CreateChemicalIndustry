@@ -18,9 +18,9 @@ plugins {
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-version = '1.0'
-group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+version = project.mod_version
+group = project.mod_group
+archivesBaseName = project.archiveBaseName
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -39,11 +39,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', project.mod_id
 
             mods {
-                examplemod {
+                create_chemical_industry {
                     source sourceSets.main
                 }
             }
@@ -56,10 +55,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', project.mod_id
 
             mods {
-                examplemod {
+                create_chemical_industry {
                     source sourceSets.main
                 }
             }
@@ -75,7 +74,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'examplemod'
 
             mods {
-                examplemod {
+                create_chemical_industry {
                     source sourceSets.main
                 }
             }
@@ -88,10 +87,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                examplemod {
+                create_chemical_industry {
                     source sourceSets.main
                 }
             }
@@ -99,7 +98,19 @@ minecraft {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+task mergeResources(type: Copy) {
+    def generated = files("src/generated/resources")
+    def resources = files("src/main/resources")
+
+    from generated
+    exclude(str -> {
+        def file = file("src/main/resources/" + str.relativePath)
+        return file.isFile() && !resources.contains(file)
+    })
+    into "$buildDir/resources/main"
+}
+
+compileJava.dependsOn mergeResources
 
 repositories {
     maven {
@@ -118,6 +129,7 @@ dependencies {
 }
 
 jar {
+    exclude(".cache/**")
     manifest {
         attributes([
                 "Specification-Title"     : "examplemod",
