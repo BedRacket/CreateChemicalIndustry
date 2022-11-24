@@ -2,23 +2,23 @@ modLoader="javafml"
 loaderVersion="[40,)"
 license="All rights reserved"
 [[mods]]
-modId="examplemod"
+modId="create_chemical_industry"
 version="${file.jarVersion}"
-displayName="Example Mod"
+displayName="Create Chemical Industry Mod"
 logoFile="examplemod.png"
 credits="Thanks for this example mod goes to Java"
 authors="Love, Cheese and small house plants"
 description='''
 '''
 
-[[dependencies.examplemod]]
+[[dependencies.create_chemical_industry]]
     modId="forge"
     mandatory=true
     versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.create_chemical_industry]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2,1.19)"
