@@ -1,5 +1,6 @@
 package org.bedracket.creatchemicalindustry.fluid;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
@@ -20,9 +21,12 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.*;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Optional;
 import java.util.Random;
 
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
 public abstract class EthanolFluid extends FlowingFluid {
 
     public Fluid getFlowing() {
