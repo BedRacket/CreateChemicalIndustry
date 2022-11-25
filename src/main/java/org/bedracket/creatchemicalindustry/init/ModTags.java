@@ -7,12 +7,12 @@ import net.minecraft.world.item.Item;
 import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
 
 public class ModTags {
+
     public static class Items {
 
         public static final TagKey<Item> CARBOHYDRATE = register("carbohydrate");
 
-        private static TagKey<Item> register(String name)
-        {
+        private static TagKey<Item> register(String name) {
             return ItemTags.create(new ResourceLocation(CreateCheicalIndustry.MODID, name));
         }
     }

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sugar",
+    "minecraft:honeycomb",
+    "minecraft:beetroot",
+    "minecraft:melon_slice",
+    "minecraft:apple"
+  ]
+}
