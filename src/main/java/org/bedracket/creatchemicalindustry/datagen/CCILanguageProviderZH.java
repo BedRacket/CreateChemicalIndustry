@@ -18,5 +18,6 @@ public class CCILanguageProviderZH extends LanguageProvider {
         add(ModItems.LIMESTONE_DUST.get(), "石灰石粉尘");
         add(ModItems.CALCIUM_CARBONATE_DUST.get(), "碳酸钙粉尘");
         add(ModItems.IMPURITY.get(), "杂质");
+        add("itemGroup.create_chemical_industry.material", "机械动力化学工艺丨材料");
     }
 }

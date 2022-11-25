@@ -3,5 +3,6 @@
   "item.create_chemical_industry.carbohydrate_raw_material": "\u78B3\u9178\u9499\u7C89\u5C18",
   "item.create_chemical_industry.impurity_dust": "\u6742\u8D28",
   "item.create_chemical_industry.limestone_dust": "\u77F3\u7070\u77F3\u7C89\u5C18",
-  "item.create_chemical_industry.starch_raw_material": "\u6DC0\u7C89\u539F\u6599"
+  "item.create_chemical_industry.starch_raw_material": "\u6DC0\u7C89\u539F\u6599",
+  "itemGroup.create_chemical_industry.material": "\u673A\u68B0\u52A8\u529B\u5316\u5B66\u5DE5\u827A\u4E28\u6750\u6599"
 }
