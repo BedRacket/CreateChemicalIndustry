@@ -3,7 +3,7 @@ package org.bedracket.creatchemicalindustry.init;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
-public class MODBlockProperties {
+public class ModBlockProperties {
 
     //Gas
     public static final BooleanProperty STEAMING = BooleanProperty.create("steaming");

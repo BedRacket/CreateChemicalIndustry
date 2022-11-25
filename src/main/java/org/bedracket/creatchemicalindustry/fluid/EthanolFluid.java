@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -19,6 +20,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.*;
+import net.minecraftforge.fluids.FluidAttributes;
+import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -122,4 +125,13 @@ public abstract class EthanolFluid extends FlowingFluid {
             return true;
         }
     }
+
+    @Override
+   public FluidAttributes createAttributes() {
+        var stillTexture = new ResourceLocation(CreateCheicalIndustry.MODID, "ethanol_still");
+        var flowingTexture = new ResourceLocation(CreateCheicalIndustry.MODID, "ethanol_flow");
+        FluidAttributes.Builder builder = FluidAttributes.builder(stillTexture, flowingTexture);
+        return builder.build(this);
+    }
+
 }
