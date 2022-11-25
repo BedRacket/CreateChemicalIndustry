@@ -15,6 +15,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS,
                     CreateChemicalIndustry.MOD_ID);
 
+    public static final RegistryObject<Item> CARBOHYDRATE_RAW_MATERIAL = material("carbohydrate_raw_material");
+    public static final RegistryObject<Item> STARCH_RAW_MATERIAL = material("starch_raw_material");
+    public static final RegistryObject<Item> LIMESTONE_DUST = material("limestone_dust");
+    public static final RegistryObject<Item> CALCIUM_CARBONATE_DUST = material("calcium_carbonate_dust");
+    public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
+
     /**
      * Used for registry items
      * @param name Items' registry name
@@ -32,12 +38,7 @@ public class ModItems {
      * @return new RegistryObject<Item>
      */
     private static RegistryObject<Item> material(String name) {
-        return ITEMS.register(name, () -> new Item(new Item.Properties().tab(ModTabs.MATERIAL)));
+        return register(name, () -> new Item(new Item.Properties().tab(ModTabs.MATERIAL)));
     }
 
-    public static final RegistryObject<Item> CARBOHYDRATE_RAW_MATERIAL = material("carbohydrate_raw_material");
-    public static final RegistryObject<Item> STARCH_RAW_MATERIAL = material("starch_raw_material");
-    public static final RegistryObject<Item> LIMESTONE_DUST = material("limestone_dust");
-    public static final RegistryObject<Item> CALCIUM_CARBONATE_DUST = material("calcium_carbonate_dust");
-    public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
 }

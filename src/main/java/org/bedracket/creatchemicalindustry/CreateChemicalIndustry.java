@@ -7,10 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
-import org.bedracket.creatchemicalindustry.init.ModBlocks;
-import org.bedracket.creatchemicalindustry.init.ModConfigs;
-import org.bedracket.creatchemicalindustry.init.ModFluids;
-import org.bedracket.creatchemicalindustry.init.ModItems;
+import org.bedracket.creatchemicalindustry.init.*;
 import org.slf4j.Logger;
 
 @Mod(CreateChemicalIndustry.MOD_ID)
@@ -28,6 +25,7 @@ public class CreateChemicalIndustry {
             ModItems.ITEMS.register(modEventBus);
             ModBlocks.BLOCKS.register(modEventBus);
             ModFluids.FLUIDS.register(modEventBus);
+            ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
             LOGGER.info("Create Chemical Industry Mod has been loaded successfully!");
         } catch (Exception e) {
             LOGGER.error("Create Chemical Industry Mod load failed...");
