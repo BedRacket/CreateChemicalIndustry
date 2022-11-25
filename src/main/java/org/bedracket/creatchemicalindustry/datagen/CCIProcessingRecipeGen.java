@@ -1,4 +1,4 @@
-package org.bedracket.creatchemicalindustry.recipe;
+package org.bedracket.creatchemicalindustry.datagen;
 
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipe;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuilder;
@@ -73,5 +73,5 @@ public abstract class CCIProcessingRecipeGen extends CreateRecipeProvider {
         return getRecipeType().getSerializer();
     }
 
-    protected abstract IRecipeTypeInfo getRecipeType();
+    abstract IRecipeTypeInfo getRecipeType();
 }

@@ -1,4 +1,4 @@
-package org.bedracket.creatchemicalindustry.recipe;
+package org.bedracket.creatchemicalindustry.datagen;
 
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.palettes.AllPaletteStoneTypes;
