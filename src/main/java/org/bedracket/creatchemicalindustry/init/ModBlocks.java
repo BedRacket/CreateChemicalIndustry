@@ -7,7 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.block.GlassJarBlock;
+import org.bedracket.creatchemicalindustry.block.EthanolFluidBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
@@ -19,6 +19,9 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS,
                     CreateChemicalIndustry.MOD_ID);
+
+    public static final RegistryObject<Block> ETHANOL_FLUID_BLOCK =
+            registerDefault("ethanol_fluid_block", EthanolFluidBlock::new);
 
     /**
      * Hanlde Default Register
