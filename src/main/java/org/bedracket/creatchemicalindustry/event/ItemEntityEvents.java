@@ -5,6 +5,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.bedracket.creatchemicalindustry.api.event.ItemEntityTickEvent;
@@ -23,6 +24,8 @@ public class ItemEntityEvents {
                 if (itemEntity.getAge() == 4) {
                     itemEntity.remove(Entity.RemovalReason.KILLED);
                     level.setBlockAndUpdate(itemEntity.getOnPos(), Blocks.FIRE.defaultBlockState());
+                    level.updateNeighborsAt(itemEntity.getOnPos(), Blocks.FIRE);
+                    level.gameEvent(itemEntity, GameEvent.BLOCK_CHANGE, itemEntity.getOnPos());
                 }
             }
         }
