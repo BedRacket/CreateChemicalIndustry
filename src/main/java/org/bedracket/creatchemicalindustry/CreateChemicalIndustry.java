@@ -13,13 +13,13 @@ import org.bedracket.creatchemicalindustry.init.ModFluids;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 import org.slf4j.Logger;
 
-@Mod(CreateCheicalIndustry.MODID)
-public class CreateCheicalIndustry {
+@Mod(CreateChemicalIndustry.MODID)
+public class CreateChemicalIndustry {
 
     public static final String MODID = "create_chemical_industry";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public CreateCheicalIndustry() {
+    public CreateChemicalIndustry() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         LOGGER.info("Loading Create Chemical Industry Mod....");
         try {

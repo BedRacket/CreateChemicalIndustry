@@ -5,7 +5,7 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
+import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.fluid.EthanolFluid;
 
 import java.util.Locale;
@@ -15,7 +15,7 @@ public class ModFluids {
 
     public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(ForgeRegistries.FLUIDS,
-                    CreateCheicalIndustry.MODID);
+                    CreateChemicalIndustry.MODID);
 
     public static final RegistryObject<FlowingFluid> ETHANOL =
             register("ethanol_fluid", EthanolFluid.Source::new);

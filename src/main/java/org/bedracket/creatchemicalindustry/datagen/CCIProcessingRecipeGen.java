@@ -7,7 +7,7 @@ import com.simibubi.create.foundation.data.recipe.*;
 import com.simibubi.create.foundation.utility.recipe.IRecipeTypeInfo;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
+import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
@@ -22,7 +22,7 @@ public abstract class CCIProcessingRecipeGen extends CreateRecipeProvider {
 
     protected <T extends ProcessingRecipe<?>> GeneratedRecipe create(String name,
                                                                  UnaryOperator<ProcessingRecipeBuilder<T>> transform) {
-        return create(new ResourceLocation(CreateCheicalIndustry.MODID, name), transform);
+        return create(new ResourceLocation(CreateChemicalIndustry.MODID, name), transform);
     }
 
     protected <T extends ProcessingRecipe<?>> GeneratedRecipe create(ResourceLocation name,
