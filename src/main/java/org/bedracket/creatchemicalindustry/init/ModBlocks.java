@@ -20,6 +20,29 @@ public class ModBlocks {
                     CreateChemicalIndustry.MOD_ID);
 
     /**
+     * Hanlde Default Register
+     * @param name registry name
+     * @param blockSupplier blocks
+     * @param blockItemFactory items
+     * @return new Instance
+     * @param <T> sth extends Block
+     */
+    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory) {
+        return register(ModBlocks.BLOCKS, ModItems.ITEMS, name, blockSupplier, blockItemFactory);
+    }
+
+    /**
+     * Handle the default registry block
+     * @param name registry name
+     * @param blockSupplier blocks
+     * @return new Instance
+     * @param <T> sth extends Block
+     */
+    private static <T extends Block> RegistryObject<T> registerDefault(String name, Supplier<T> blockSupplier) {
+        return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties()));
+    }
+
+    /**
      * used for registry default BlockItems
      * @param blocks Blocks' Instance
      * @param items Items' Instance
