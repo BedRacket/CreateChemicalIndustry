@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create_chemical_industry:item/impurity_dust"
+  }
+}
