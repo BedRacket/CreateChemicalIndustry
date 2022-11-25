@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.block.GlassJarBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;

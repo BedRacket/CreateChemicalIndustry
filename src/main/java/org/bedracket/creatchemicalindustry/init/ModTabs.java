@@ -13,4 +13,11 @@ public class ModTabs {
             return new ItemStack(ModItems.CALCIUM_CARBONATE_DUST.get());
         }
     };
+    public static final CreativeModeTab FACILITY = new CreativeModeTab(CreateChemicalIndustry.MOD_ID + ".facility") {
+        @NotNull
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.CALCIUM_CARBONATE_DUST.get());
+        }
+    };
 }
