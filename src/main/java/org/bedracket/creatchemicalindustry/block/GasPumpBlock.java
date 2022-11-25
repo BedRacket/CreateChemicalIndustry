@@ -1,7 +1,6 @@
 package org.bedracket.creatchemicalindustry.block;
 
 import com.simibubi.create.content.contraptions.base.DirectionalKineticBlock;
-import com.simibubi.create.content.contraptions.fluids.PumpTileEntity;
 import com.simibubi.create.content.contraptions.relays.elementary.ICogWheel;
 import com.simibubi.create.foundation.block.ITE;
 import net.minecraft.core.Direction;

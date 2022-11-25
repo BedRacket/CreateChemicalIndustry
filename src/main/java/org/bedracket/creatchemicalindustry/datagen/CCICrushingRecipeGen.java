@@ -1,12 +1,8 @@
 package org.bedracket.creatchemicalindustry.datagen;
 
-import com.simibubi.create.AllBlockPartials;
-import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllRecipeTypes;
-import com.simibubi.create.content.palettes.AllPaletteBlocks;
 import com.simibubi.create.content.palettes.AllPaletteStoneTypes;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
-import com.simibubi.create.foundation.worldgen.AllLayerPatterns;
 import net.minecraft.data.DataGenerator;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 import org.bedracket.creatchemicalindustry.init.ModTags;

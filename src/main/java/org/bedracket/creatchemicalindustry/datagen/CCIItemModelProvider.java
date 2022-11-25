@@ -20,13 +20,13 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ModItemModelProvider extends ItemModelProvider {
+public class CCIItemModelProvider extends ItemModelProvider {
     public static final ResourceLocation GENERATED = new ResourceLocation("item/generated");
     public static final ResourceLocation HANDHELD = new ResourceLocation("item/handheld");
     protected final DeferredRegister<? extends Item> deferredRegister;
     protected Set<Item> skipItems = new HashSet<>();
 
-    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper, DeferredRegister<? extends Item> deferredRegister) {
+    public CCIItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper, DeferredRegister<? extends Item> deferredRegister) {
         super(generator, CreateChemicalIndustry.MOD_ID, existingFileHelper);
         this.deferredRegister = deferredRegister;
     }

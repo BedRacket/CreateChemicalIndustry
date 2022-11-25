@@ -10,13 +10,15 @@ import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 
 @Mod.EventBusSubscriber(modid = CreateChemicalIndustry.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModDataGenerator {
+public class CCIDataGenerator {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
         generator.addProvider(new CCICrushingRecipeGen(generator));
-        generator.addProvider(new ModItemModelProvider(generator, helper, ModItems.ITEMS));
+        generator.addProvider(new CCIItemModelProvider(generator, helper, ModItems.ITEMS));
+        generator.addProvider(new CCILanguageProvider(generator, "en_us"));
+        generator.addProvider(new CCILanguageProviderZH(generator, "zh_cn"));
     }
 }

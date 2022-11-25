@@ -1,6 +1,5 @@
 package org.bedracket.creatchemicalindustry.block;
 
-import com.simibubi.create.content.contraptions.fluids.pipes.FluidPipeTileEntity;
 import com.simibubi.create.content.contraptions.wrench.IWrenchableWithBracket;
 import com.simibubi.create.foundation.block.ITE;
 import net.minecraft.core.BlockPos;
