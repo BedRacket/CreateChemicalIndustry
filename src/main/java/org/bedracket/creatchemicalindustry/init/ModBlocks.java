@@ -17,7 +17,7 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS,
-                    CreateChemicalIndustry.MODID);
+                    CreateChemicalIndustry.MOD_ID);
 
     /**
      * used for registry default BlockItems

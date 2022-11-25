@@ -13,10 +13,10 @@ import org.bedracket.creatchemicalindustry.init.ModFluids;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 import org.slf4j.Logger;
 
-@Mod(CreateChemicalIndustry.MODID)
+@Mod(CreateChemicalIndustry.MOD_ID)
 public class CreateChemicalIndustry {
 
-    public static final String MODID = "create_chemical_industry";
+    public static final String MOD_ID = "create_chemical_industry";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public CreateChemicalIndustry() {

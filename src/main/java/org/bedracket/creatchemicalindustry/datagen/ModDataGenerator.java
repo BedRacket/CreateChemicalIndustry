@@ -2,17 +2,21 @@ package org.bedracket.creatchemicalindustry.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.init.ModItems;
 
-@Mod.EventBusSubscriber(modid = CreateChemicalIndustry.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = CreateChemicalIndustry.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModDataGenerator {
+
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        System.out.println("YESS");
         DataGenerator generator = event.getGenerator();
+        ExistingFileHelper helper = event.getExistingFileHelper();
         generator.addProvider(new CCICrushingRecipeGen(generator));
+        generator.addProvider(new ModItemModelProvider(generator, helper, ModItems.ITEMS));
     }
 }

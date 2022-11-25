@@ -128,8 +128,8 @@ public abstract class EthanolFluid extends FlowingFluid {
 
     @Override
    public FluidAttributes createAttributes() {
-        var stillTexture = new ResourceLocation(CreateChemicalIndustry.MODID, "ethanol_still");
-        var flowingTexture = new ResourceLocation(CreateChemicalIndustry.MODID, "ethanol_flow");
+        var stillTexture = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "ethanol_still");
+        var flowingTexture = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "ethanol_flow");
         FluidAttributes.Builder builder = FluidAttributes.builder(stillTexture, flowingTexture);
         return builder.build(this);
     }

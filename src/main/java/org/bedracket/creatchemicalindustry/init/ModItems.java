@@ -13,7 +13,7 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS,
-                    CreateChemicalIndustry.MODID);
+                    CreateChemicalIndustry.MOD_ID);
 
     /**
      * Used for registry items

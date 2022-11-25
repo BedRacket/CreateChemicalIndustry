@@ -15,7 +15,7 @@ public class ModTags {
         public static final TagKey<Item> STARCH = register("starch");
 
         private static TagKey<Item> register(String name) {
-            return ItemTags.create(new ResourceLocation(CreateChemicalIndustry.MODID, name));
+            return ItemTags.create(new ResourceLocation(CreateChemicalIndustry.MOD_ID, name));
         }
     }
 }

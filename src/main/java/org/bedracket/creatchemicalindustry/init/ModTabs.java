@@ -6,7 +6,7 @@ import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.jetbrains.annotations.NotNull;
 
 public class ModTabs {
-    public static final CreativeModeTab MATERIAL = new CreativeModeTab(CreateChemicalIndustry.MODID + ".material") {
+    public static final CreativeModeTab MATERIAL = new CreativeModeTab(CreateChemicalIndustry.MOD_ID + ".material") {
         @NotNull
         @Override
         public ItemStack makeIcon() {

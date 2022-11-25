@@ -22,7 +22,7 @@ public abstract class CCIProcessingRecipeGen extends CreateRecipeProvider {
 
     protected <T extends ProcessingRecipe<?>> GeneratedRecipe create(String name,
                                                                  UnaryOperator<ProcessingRecipeBuilder<T>> transform) {
-        return create(new ResourceLocation(CreateChemicalIndustry.MODID, name), transform);
+        return create(new ResourceLocation(CreateChemicalIndustry.MOD_ID, name), transform);
     }
 
     protected <T extends ProcessingRecipe<?>> GeneratedRecipe create(ResourceLocation name,
