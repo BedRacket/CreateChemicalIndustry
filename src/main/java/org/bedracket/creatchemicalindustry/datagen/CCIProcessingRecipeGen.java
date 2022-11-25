@@ -9,7 +9,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
 import net.minecraft.resources.ResourceLocation;
-import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
+import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -49,7 +49,7 @@ public abstract class CCIProcessingRecipeGen extends CreateRecipeProvider {
 
     protected <T extends ProcessingRecipe<?>> GeneratedRecipe create(String name,
                                                                  UnaryOperator<ProcessingRecipeBuilder<T>> transform) {
-        return create(new ResourceLocation(CreateCheicalIndustry.MODID, name), transform);
+        return create(new ResourceLocation(CreateChemicalIndustry.MODID, name), transform);
     }
 
     protected <T extends ProcessingRecipe<?>> GeneratedRecipe create(ResourceLocation name,

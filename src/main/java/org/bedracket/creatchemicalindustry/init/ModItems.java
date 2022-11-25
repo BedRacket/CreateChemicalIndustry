@@ -4,7 +4,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
+import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -13,7 +13,7 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS,
-                    CreateCheicalIndustry.MODID);
+                    CreateChemicalIndustry.MODID);
 
     /**
      * Used for registry items

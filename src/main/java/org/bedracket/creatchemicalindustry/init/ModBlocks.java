@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.bedracket.creatchemicalindustry.CreateCheicalIndustry;
+import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
@@ -17,7 +17,7 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS,
-                    CreateCheicalIndustry.MODID);
+                    CreateChemicalIndustry.MODID);
 
     /**
      * used for registry default BlockItems
