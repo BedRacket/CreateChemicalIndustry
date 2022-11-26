@@ -8,9 +8,6 @@ import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
 import org.bedracket.creatchemicalindustry.register.FluidDeferredRegister;
 import org.bedracket.creatchemicalindustry.register.FluidRegistryObject;
 
-import java.util.Locale;
-import java.util.function.Supplier;
-
 public class ModFluids {
     public static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(CreateChemicalIndustry.MOD_ID);
 

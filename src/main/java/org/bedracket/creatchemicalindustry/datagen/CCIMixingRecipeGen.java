@@ -8,6 +8,7 @@ import org.bedracket.creatchemicalindustry.init.ModTags;
 import org.jetbrains.annotations.NotNull;
 
 public class CCIMixingRecipeGen extends CCIProcessingRecipeGen{
+
     public CreateRecipeProvider.GeneratedRecipe CARBOHYDRATE_RAW_MATERIAL = create(ModItems.CARBOHYDRATE_RAW_MATERIAL.getId(), (b) -> {
         return b.duration(100).require(ModTags.Items.CARBOHYDRATE)
                 .output(ModItems.CARBOHYDRATE_RAW_MATERIAL.get());
