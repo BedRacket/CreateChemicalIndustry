@@ -1,36 +1,19 @@
 package org.bedracket.creatchemicalindustry.init;
 
-import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.level.block.LiquidBlock;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.fluid.EthanolFluid;
+import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
+import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
+import org.bedracket.creatchemicalindustry.register.FluidDeferredRegister;
+import org.bedracket.creatchemicalindustry.register.FluidRegistryObject;
 
 import java.util.Locale;
 import java.util.function.Supplier;
 
 public class ModFluids {
+    public static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(CreateChemicalIndustry.MOD_ID);
 
-    public static final DeferredRegister<Fluid> FLUIDS =
-            DeferredRegister.create(ForgeRegistries.FLUIDS,
-                    CreateChemicalIndustry.MOD_ID);
-
-    public static final RegistryObject<FlowingFluid> ETHANOL_FLUID =
-            register("ethanol_fluid", EthanolFluid.Source::new);
-
-    public static final RegistryObject<FlowingFluid> FLOWING_ETHANOL_FLUID =
-            register("flowing_ethanol_fluid", EthanolFluid.Flowing::new);
-
-    /**
-     * Used for registry fluids
-     * @param name Fluids' registry name
-     * @param fluid Fluid Instance
-     * @return new RegistryObject<Fluid>
-     * @param <T> sth extends Fluid
-     */
-    private static <T extends Fluid> RegistryObject<T> register(String name, Supplier<T> fluid) {
-        return FLUIDS.register(name.toLowerCase(Locale.ROOT), fluid);
-    }
+    public static final FluidRegistryObject<Source, Flowing, LiquidBlock, BucketItem> ETHANOL
+            = FLUIDS.registerLiquidChemical("ethanol", 0xFFFFFFFF, 0, 300F, 0.789F);
 }

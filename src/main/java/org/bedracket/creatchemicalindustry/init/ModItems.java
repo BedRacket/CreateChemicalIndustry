@@ -5,7 +5,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.item.EthanolFluidBucket;
 
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -23,8 +22,6 @@ public class ModItems {
     public static final RegistryObject<Item> CALCIUM_OXIDE_DUST = material("calcium_oxide_dust");
     public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
 
-    public static final RegistryObject<Item> ETHANOL_FLUID_BUCKET =
-            register("ethanol_fluid_bucket", EthanolFluidBucket::new);
 
     /**
      * Used for registry items

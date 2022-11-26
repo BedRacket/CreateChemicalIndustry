@@ -100,6 +100,6 @@ public class CCIItemModelProvider extends ItemModelProvider {
      * skipItems(ModItems.EXAMPLE_ITEM.get());
      */
     protected void addSkipItems()  {
-        skipItems(ModItems.ETHANOL_FLUID_BUCKET.get());
+
     }
 }

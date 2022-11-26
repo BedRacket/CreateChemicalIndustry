@@ -13,9 +13,5 @@ public class ClientRegisterEvents {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.ETHANOL_FLUID.get(),
-                renderType -> renderType == RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_ETHANOL_FLUID.get(),
-                renderType -> renderType == RenderType.translucent());
     }
 }
