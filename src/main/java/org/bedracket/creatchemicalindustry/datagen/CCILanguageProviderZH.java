@@ -13,10 +13,11 @@ public class CCILanguageProviderZH extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.CARBOHYDRATE_RAW_MATERIAL.get(), "碳酸钙粉尘");
+        add(ModItems.CARBOHYDRATE_RAW_MATERIAL.get(), "碳酸钙粉");
         add(ModItems.STARCH_RAW_MATERIAL.get(), "淀粉原料");
-        add(ModItems.LIMESTONE_DUST.get(), "石灰石粉尘");
-        add(ModItems.CALCIUM_CARBONATE_DUST.get(), "碳酸钙粉尘");
+        add(ModItems.LIMESTONE_DUST.get(), "石灰石粉");
+        add(ModItems.CALCIUM_CARBONATE_DUST.get(), "碳酸钙粉");
+        add(ModItems.CALCIUM_OXIDE_DUST.get(), "氧化钙粉");
         add(ModItems.IMPURITY.get(), "杂质");
         add("itemGroup.create_chemical_industry.material", "机械动力化学工艺丨材料");
     }

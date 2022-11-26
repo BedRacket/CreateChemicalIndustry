@@ -5,6 +5,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.blockentity.GlassJarTileEntity;
 
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -14,10 +15,6 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES,
                     CreateChemicalIndustry.MOD_ID);
-    /**
-    public static final RegistryObject<BlockEntityType<CalcinatorTileEntity>> CALCINATOR_TILE_ENTITY =
-            register("calcinator_tile_entity",  () -> BlockEntityType.Builder
-                    .of(CalcinatorTileEntity::new, ModBlocks..get()).build(null));*/
 
     /**
      * Used for registry items

@@ -3,6 +3,9 @@ package org.bedracket.creatchemicalindustry.init;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,6 +25,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ETHANOL_FLUID_BLOCK =
             registerDefault("ethanol_fluid_block", EthanolFluidBlock::new);
+
 
     /**
      * Hanlde Default Register
@@ -44,6 +48,10 @@ public class ModBlocks {
      */
     private static <T extends Block> RegistryObject<T> registerDefault(String name, Supplier<T> blockSupplier) {
         return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties()));
+    }
+
+    private static <T extends Block> RegistryObject<T> registerFacility(String name, Supplier<T> blockSupplier) {
+        return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties().tab(ModTabs.FACILITY)));
     }
 
     /**

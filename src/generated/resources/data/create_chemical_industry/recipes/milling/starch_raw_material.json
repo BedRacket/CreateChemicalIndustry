@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "tag": "create_chemical_industry:starch"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_chemical_industry:starch_raw_material"
+    }
+  ],
+  "processingTime": 100
+}

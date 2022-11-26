@@ -19,7 +19,7 @@ public class ItemEntityEvents {
         ItemEntity itemEntity = event.getEntityItem();
         ItemStack dropItem = itemEntity.getItem();
         Level level = event.getEntityItem().getLevel();
-        if (dropItem.is(ModItems.LIMESTONE_DUST.get())) {
+        if (dropItem.is(ModItems.CALCIUM_OXIDE_DUST.get())) {
             if (itemEntity.isInWater() || level.isRainingAt(itemEntity.getOnPos().above())) {
                 if (itemEntity.getAge() == 4) {
                     itemEntity.remove(Entity.RemovalReason.KILLED);

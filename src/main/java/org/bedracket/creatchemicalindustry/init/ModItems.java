@@ -22,6 +22,7 @@ public class ModItems {
     public static final RegistryObject<Item> STARCH_RAW_MATERIAL = material("starch_raw_material");
     public static final RegistryObject<Item> LIMESTONE_DUST = material("limestone_dust");
     public static final RegistryObject<Item> CALCIUM_CARBONATE_DUST = material("calcium_carbonate_dust");
+    public static final RegistryObject<Item> CALCIUM_OXIDE_DUST = material("calcium_oxide_dust");
     public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
 
     public static final RegistryObject<Item> ETHANOL_FLUID_BUCKET =

@@ -18,6 +18,7 @@ public class CCILanguageProvider extends LanguageProvider {
         add(ModItems.LIMESTONE_DUST.get(), "Lime Stone Dust");
         add(ModItems.CALCIUM_CARBONATE_DUST.get(), "Calcium Carbonate Dust");
         add(ModItems.IMPURITY.get(), "Impurity");
+        add(ModItems.CALCIUM_OXIDE_DUST.get(), "Calcium Oxide Dust");
         add("itemGroup.create_chemical_industry.material", "Material");
     }
 }
