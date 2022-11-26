@@ -20,8 +20,10 @@ public class CCILanguageProvider extends LanguageProvider {
         add(ModItems.CALCIUM_CARBONATE_DUST.get(), "Calcium Carbonate Dust");
         add(ModItems.IMPURITY.get(), "Impurity");
         add(ModItems.CALCIUM_OXIDE_DUST.get(), "Calcium Oxide Dust");
-        add(ModFluids.ETHANOL.getBlock(), "Ethanol Fluid");
-        add(ModFluids.ETHANOL.getBucket(), "Ethanol Fluid Bucket");
+        add(ModFluids.ETHANOL.getBlock(), "Ethanol");
+        add(ModFluids.ETHANOL.getBucket(), "Ethanol Bucket");
+        add(ModFluids.FERMENTATION_BROTH.getBlock(), "Fermentation Broth");
+        add(ModFluids.FERMENTATION_BROTH.getBucket(), "Fermentation Broth Bucket");
         add("itemGroup.create_chemical_industry.material", "Material");
     }
 }

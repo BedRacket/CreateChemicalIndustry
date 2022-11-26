@@ -17,5 +17,9 @@ public class ClientRegisterEvents {
                 renderType -> renderType == RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.ETHANOL.getFlowingFluid(),
                 renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.FERMENTATION_BROTH.getFluid(),
+                renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.FERMENTATION_BROTH.getFlowingFluid(),
+                renderType -> renderType == RenderType.translucent());
     }
 }
