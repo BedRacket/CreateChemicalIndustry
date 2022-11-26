@@ -14,7 +14,7 @@ public class CCILanguageProviderZH extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.CARBOHYDRATE_RAW_MATERIAL.get(), "碳酸钙粉");
+        add(ModItems.CARBOHYDRATE_RAW_MATERIAL.get(), "糖类原料");
         add(ModItems.STARCH_RAW_MATERIAL.get(), "淀粉原料");
         add(ModItems.LIMESTONE_DUST.get(), "石灰石粉");
         add(ModItems.CALCIUM_CARBONATE_DUST.get(), "碳酸钙粉");

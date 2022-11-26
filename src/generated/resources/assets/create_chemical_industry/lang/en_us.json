@@ -1,9 +1,11 @@
 {
-  "block.create_chemical_industry.ethanol": "Ethanol Fluid",
+  "block.create_chemical_industry.ethanol": "Ethanol",
+  "block.create_chemical_industry.fermentation_broth": "Fermentation Broth",
   "item.create_chemical_industry.calcium_carbonate_dust": "Calcium Carbonate Dust",
   "item.create_chemical_industry.calcium_oxide_dust": "Calcium Oxide Dust",
   "item.create_chemical_industry.carbohydrate_raw_material": "Calcium Carbonate Dust",
-  "item.create_chemical_industry.ethanol_bucket": "Ethanol Fluid Bucket",
+  "item.create_chemical_industry.ethanol_bucket": "Ethanol Bucket",
+  "item.create_chemical_industry.fermentation_broth_bucket": "Fermentation Broth Bucket",
   "item.create_chemical_industry.impurity_dust": "Impurity",
   "item.create_chemical_industry.limestone_dust": "Lime Stone Dust",
   "item.create_chemical_industry.starch_raw_material": "Starch Raw Material",

@@ -14,7 +14,7 @@ public class CCILanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.CARBOHYDRATE_RAW_MATERIAL.get(), "Calcium Carbonate Dust");
+        add(ModItems.CARBOHYDRATE_RAW_MATERIAL.get(), "Carbohydrate Raw Material");
         add(ModItems.STARCH_RAW_MATERIAL.get(), "Starch Raw Material");
         add(ModItems.LIMESTONE_DUST.get(), "Lime Stone Dust");
         add(ModItems.CALCIUM_CARBONATE_DUST.get(), "Calcium Carbonate Dust");
