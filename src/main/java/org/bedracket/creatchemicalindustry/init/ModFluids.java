@@ -17,10 +17,10 @@ public class ModFluids {
             DeferredRegister.create(ForgeRegistries.FLUIDS,
                     CreateChemicalIndustry.MOD_ID);
 
-    public static final RegistryObject<FlowingFluid> ETHANOL =
+    public static final RegistryObject<FlowingFluid> ETHANOL_FLUID =
             register("ethanol_fluid", EthanolFluid.Source::new);
 
-    public static final RegistryObject<FlowingFluid> FLOWING_ETHANOL =
+    public static final RegistryObject<FlowingFluid> FLOWING_ETHANOL_FLUID =
             register("flowing_ethanol_fluid", EthanolFluid.Flowing::new);
 
     /**

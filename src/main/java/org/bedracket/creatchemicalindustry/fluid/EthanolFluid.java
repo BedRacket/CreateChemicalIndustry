@@ -1,60 +1,63 @@
 package org.bedracket.creatchemicalindustry.fluid;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
-import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import net.minecraftforge.fluids.FluidAttributes;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Optional;
-import java.util.Random;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.resources.ResourceLocation;
+import org.bedracket.creatchemicalindustry.init.ModBlocks;
+import org.bedracket.creatchemicalindustry.init.ModFluids;
+import org.bedracket.creatchemicalindustry.init.ModItems;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
-public class EthanolFluid extends ForgeFlowingFluid {
+public abstract class EthanolFluid extends ForgeFlowingFluid {
+    public static final ForgeFlowingFluid.Properties PROPERTIES =
+            new ForgeFlowingFluid
+            .Properties(ModFluids.ETHANOL_FLUID,
+            ModFluids.FLOWING_ETHANOL_FLUID,
+            FluidAttributes.builder(
+                    new ResourceLocation("create_chemical_industry:block/ethanol_overlay"),
+                    new ResourceLocation("create_chemical_industry:block/ethanol_flow")
+            )).explosionResistance(100f)
+            .bucket(ModItems.ETHANOL_FLUID_BUCKET).block(() ->
+                    (LiquidBlock) ModBlocks.ETHANOL_FLUID_BLOCK.get());
 
-    protected EthanolFluid(Properties properties) {
-        super(properties);
+    private EthanolFluid() {
+        super(PROPERTIES);
     }
 
-    @Override
-   public FluidAttributes createAttributes() {
-        var stillTexture = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "ethanol_still");
-        var flowingTexture = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "ethanol_flow");
-        FluidAttributes.Builder builder = FluidAttributes.builder(stillTexture, flowingTexture);
-        return builder.build(this);
+    public static class Source extends EthanolFluid {
+        public Source() {
+            super();
+        }
+
+        public int getAmount(FluidState state) {
+            return 8;
+        }
+
+        public boolean isSource(FluidState state) {
+            return true;
+        }
     }
 
-    @Override
-    public boolean isSource(FluidState pState) {
-        return false;
-    }
+    public static class Flowing extends EthanolFluid {
+        public Flowing() {
+            super();
+        }
 
-    @Override
-    public int getAmount(FluidState pState) {
-        return 0;
+        protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {
+            super.createFluidStateDefinition(builder);
+            builder.add(LEVEL);
+        }
+
+        public int getAmount(FluidState state) {
+            return state.getValue(LEVEL);
+        }
+
+        public boolean isSource(FluidState state) {
+            return false;
+        }
     }
 }

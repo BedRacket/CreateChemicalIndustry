@@ -8,7 +8,7 @@ import org.bedracket.creatchemicalindustry.init.ModFluids;
 public class EthanolFluidBlock extends LiquidBlock {
 
     public EthanolFluidBlock() {
-        super(ModFluids.ETHANOL,
+        super(ModFluids.ETHANOL_FLUID,
                 BlockBehaviour.Properties
                         .of(Material.WATER)
                         .strength(100f)

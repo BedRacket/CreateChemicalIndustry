@@ -1,13 +1,11 @@
 package org.bedracket.creatchemicalindustry.init;
 
-import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.item.EthanolFluidBucket;
 
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -26,11 +24,7 @@ public class ModItems {
     public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
 
     public static final RegistryObject<Item> ETHANOL_FLUID_BUCKET =
-            register("ethanol_fluid_bucket",
-                    () -> new BucketItem(ModFluids.ETHANOL.get(),
-                    new Item.Properties().craftRemainder(Items.BUCKET)
-                            .stacksTo(1).rarity(Rarity.COMMON)
-                            .tab(ModTabs.MATERIAL)));
+            register("ethanol_fluid_bucket", EthanolFluidBucket::new);
 
     /**
      * Used for registry items

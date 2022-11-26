@@ -17,6 +17,8 @@ public class CCIDataGenerator {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
         generator.addProvider(new CCICrushingRecipeGen(generator));
+        generator.addProvider(new CCIMillingRecipeGen(generator));
+        generator.addProvider(new CCIMixingRecipeGen(generator));
         generator.addProvider(new CCIItemModelProvider(generator, helper, ModItems.ITEMS));
         generator.addProvider(new CCILanguageProvider(generator, "en_us"));
         generator.addProvider(new CCILanguageProviderZH(generator, "zh_cn"));

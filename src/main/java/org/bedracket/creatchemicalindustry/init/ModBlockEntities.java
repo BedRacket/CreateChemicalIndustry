@@ -5,7 +5,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.blockentity.GlassJarTileEntity;
 
 import java.util.Locale;
 import java.util.function.Supplier;
