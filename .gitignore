@@ -21,3 +21,4 @@ build
 eclipse
 run
 src/generated/resources/.cache
+/src/generated/resources/data/create_chemical_industry/recipes/mixing/fermentation_broth.json

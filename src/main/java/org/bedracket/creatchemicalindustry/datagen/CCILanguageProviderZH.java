@@ -3,7 +3,7 @@ package org.bedracket.creatchemicalindustry.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.init.ModFluids;
+import org.bedracket.creatchemicalindustry.init.ModLiquids;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 
 public class CCILanguageProviderZH extends LanguageProvider {
@@ -20,8 +20,8 @@ public class CCILanguageProviderZH extends LanguageProvider {
         add(ModItems.CALCIUM_CARBONATE_DUST.get(), "碳酸钙粉");
         add(ModItems.CALCIUM_OXIDE_DUST.get(), "氧化钙粉");
         add(ModItems.IMPURITY.get(), "杂质");
-        add(ModFluids.ETHANOL.getBlock(), "乙醇流体");
-        add(ModFluids.ETHANOL.getBucket(), "乙醇流体桶");
+        add(ModLiquids.ETHANOL.getBlock(), "乙醇流体");
+        add(ModLiquids.ETHANOL.getBucket(), "乙醇流体桶");
         add("itemGroup.create_chemical_industry.material", "机械动力化学工艺丨材料");
     }
 }

@@ -6,20 +6,25 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import org.bedracket.creatchemicalindustry.init.ModFluids;
+import org.bedracket.creatchemicalindustry.init.ModGases;
+import org.bedracket.creatchemicalindustry.init.ModLiquids;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientRegisterEvents {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.ETHANOL.getFluid(),
+        ItemBlockRenderTypes.setRenderLayer(ModLiquids.ETHANOL.getFluid(),
                 renderType -> renderType == RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.ETHANOL.getFlowingFluid(),
+        ItemBlockRenderTypes.setRenderLayer(ModLiquids.ETHANOL.getFlowingFluid(),
                 renderType -> renderType == RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.FERMENTATION_BROTH.getFluid(),
+        ItemBlockRenderTypes.setRenderLayer(ModLiquids.FERMENTATION_BROTH.getFluid(),
                 renderType -> renderType == RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.FERMENTATION_BROTH.getFlowingFluid(),
+        ItemBlockRenderTypes.setRenderLayer(ModLiquids.FERMENTATION_BROTH.getFlowingFluid(),
+                renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModGases.ETHANOL_GAS.getFluid(),
+                renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModGases.ETHANOL_GAS.getFlowingFluid(),
                 renderType -> renderType == RenderType.translucent());
     }
 }

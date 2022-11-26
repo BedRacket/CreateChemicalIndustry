@@ -29,19 +29,19 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.FluidAttributes.Builder;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
-import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
-import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.init.ModTabs;
+import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Source;
+import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Flowing;
 
 /**
  * Code from mekanism/common/registration/impl/FluidDeferredRegister.java
  * @author mekanism <a href="https://github.com/mekanism/">...</a>
  * @license MIT
  */
-public class FluidDeferredRegister {
+public class GasDeferredRegister {
 
     private static final ResourceLocation OVERLAY = new ResourceLocation("minecraft", "block/water_overlay");
     private static final ResourceLocation LIQUID = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "liquid/liquid");
@@ -73,20 +73,20 @@ public class FluidDeferredRegister {
                 .overlay(OVERLAY);
     }
 
-    private final List<FluidRegistryObject<?, ?, ?, ?>> allFluids = new ArrayList<>();
+    private final List<GasRegistryObject<?, ?, ?, ?>> allFluids = new ArrayList<>();
 
     private final DeferredRegister<Fluid> fluidRegister;
     private final DeferredRegister<Block> blockRegister;
     private final DeferredRegister<Item> itemRegister;
 
-    public FluidDeferredRegister(String modid) {
+    public GasDeferredRegister(String modid) {
         blockRegister = DeferredRegister.create(ForgeRegistries.BLOCKS, modid);
         fluidRegister = DeferredRegister.create(ForgeRegistries.FLUIDS, modid);
         itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, modid);
     }
 
-    public FluidRegistryObject<Source, Flowing, LiquidBlock, BucketItem> registerLiquidChemical(String pName,
-                                                    int pColor, int pLightLevel, float pTemperature, float pDensity) {
+    public GasRegistryObject<Source, Flowing, LiquidBlock, BucketItem> registerLiquidChemical(String pName,
+                                                                                                    int pColor, int pLightLevel, float pTemperature, float pDensity) {
         int density = Math.round(pDensity);
         return register(pName, fluidAttributes -> fluidAttributes
                 .color(pColor)
@@ -96,39 +96,39 @@ public class FluidDeferredRegister {
                 .luminosity(pLightLevel));
     }
 
-    public FluidRegistryObject<Source, Flowing, LiquidBlock, BucketItem> register(String name, UnaryOperator<Builder> fluidAttributes) {
+    public GasRegistryObject<Source, Flowing, LiquidBlock, BucketItem> register(String name, UnaryOperator<Builder> fluidAttributes) {
         return register(name, BucketItem::new, fluidAttributes);
     }
 
-    public <BUCKET extends BucketItem> FluidRegistryObject<Source, Flowing, LiquidBlock, BUCKET> register(String name, BucketCreator<BUCKET> bucketCreator,
-                                                                                                          UnaryOperator<Builder> fluidAttributes) {
+    public <BUCKET extends BucketItem> GasRegistryObject<Source, Flowing, LiquidBlock, BUCKET> register(String name, BucketCreator<BUCKET> bucketCreator,
+                                                                                                           UnaryOperator<Builder> fluidAttributes) {
         return register(name, fluidAttributes.apply(getMekBaseBuilder()), bucketCreator);
     }
 
-    public FluidRegistryObject<Source, Flowing, LiquidBlock, BucketItem> register(String name, FluidAttributes.Builder builder) {
+    public GasRegistryObject<Source, Flowing, LiquidBlock, BucketItem> register(String name, FluidAttributes.Builder builder) {
         return register(name, builder, BucketItem::new);
     }
 
-    public <BUCKET extends BucketItem> FluidRegistryObject<Source, Flowing, LiquidBlock, BUCKET> register(String name, FluidAttributes.Builder builder,
-                                                                                                          BucketCreator<BUCKET> bucketCreator) {
+    public <BUCKET extends BucketItem> GasRegistryObject<Source, Flowing, LiquidBlock, BUCKET> register(String name, FluidAttributes.Builder builder,
+                                                                                                           BucketCreator<BUCKET> bucketCreator) {
         String flowingName = "flowing_" + name;
         String bucketName = name + "_bucket";
         //Create the registry object and let the values init to null as before we actually call get on them, we will update the backing values
-        FluidRegistryObject<Source, Flowing, LiquidBlock, BUCKET> fluidRegistryObject = new FluidRegistryObject<>();
+        GasRegistryObject<Source, Flowing, LiquidBlock, BUCKET> GasRegistryObject = new GasRegistryObject<>();
         //Pass in suppliers that are wrapped instead of direct references to the registry objects, so that when we update the registry object to
         // point to a new object it gets updated properly.
-        ForgeFlowingFluid.Properties properties = new ForgeFlowingFluid.Properties(fluidRegistryObject::getStillFluid,
-                fluidRegistryObject::getFlowingFluid, builder).bucket(fluidRegistryObject::getBucket).block(fluidRegistryObject::getBlock);
+        ForgeFlowingFluid.Properties properties = new ForgeFlowingFluid.Properties(GasRegistryObject::getStillFluid,
+                GasRegistryObject::getFlowingFluid, builder).bucket(GasRegistryObject::getBucket).block(GasRegistryObject::getBlock);
         //Update the references to objects that are retrieved from the deferred registers
-        fluidRegistryObject.updateStill(fluidRegister.register(name, () -> new Source(properties)));
-        fluidRegistryObject.updateFlowing(fluidRegister.register(flowingName, () -> new Flowing(properties)));
-        fluidRegistryObject.updateBucket(itemRegister.register(bucketName, () -> bucketCreator.create(fluidRegistryObject::getStillFluid,
+        GasRegistryObject.updateStill(fluidRegister.register(name, () -> new Source(properties)));
+        GasRegistryObject.updateFlowing(fluidRegister.register(flowingName, () -> new Flowing(properties)));
+        GasRegistryObject.updateBucket(itemRegister.register(bucketName, () -> bucketCreator.create(GasRegistryObject::getStillFluid,
                 new Item.Properties().tab(ModTabs.MATERIAL).stacksTo(1).craftRemainder(Items.BUCKET))));
         //Note: The block properties used here is a copy of the ones for water
-        fluidRegistryObject.updateBlock(blockRegister.register(name, () -> new LiquidBlock(fluidRegistryObject::getStillFluid,
+        GasRegistryObject.updateBlock(blockRegister.register(name, () -> new LiquidBlock(GasRegistryObject::getStillFluid,
                 BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100.0F).noDrops())));
-        allFluids.add(fluidRegistryObject);
-        return fluidRegistryObject;
+        allFluids.add(GasRegistryObject);
+        return GasRegistryObject;
     }
 
     public void register(IEventBus bus) {
@@ -137,12 +137,12 @@ public class FluidDeferredRegister {
         itemRegister.register(bus);
     }
 
-    public List<FluidRegistryObject<?, ?, ?, ?>> getAllFluids() {
+    public List<GasRegistryObject<?, ?, ?, ?>> getAllFluids() {
         return Collections.unmodifiableList(allFluids);
     }
 
     public void registerBucketDispenserBehavior() {
-        for (FluidRegistryObject<?, ?, ?, ?> fluidRO : getAllFluids()) {
+        for (GasRegistryObject<?, ?, ?, ?> fluidRO : getAllFluids()) {
             DispenserBlock.registerBehavior(fluidRO.getBucket(), BUCKET_DISPENSE_BEHAVIOR);
         }
     }

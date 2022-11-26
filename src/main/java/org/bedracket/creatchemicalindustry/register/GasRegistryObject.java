@@ -5,8 +5,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.RegistryObject;
+import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Source;
+import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Flowing;
 
 /**
  * Code from Mekanism/src/api/java/mekanism/api/providers/IFluidProvider.java
@@ -14,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
  * @license MIT
  */
 @ParametersAreNonnullByDefault
-public class FluidRegistryObject<STILL extends Fluid, FLOWING extends Fluid, BLOCK extends LiquidBlock, BUCKET extends BucketItem> {
+public class GasRegistryObject<STILL extends Source, FLOWING extends Flowing, BLOCK extends LiquidBlock, BUCKET extends BucketItem> {
 
     private RegistryObject<STILL> stillRO;
     private RegistryObject<FLOWING> flowingRO;

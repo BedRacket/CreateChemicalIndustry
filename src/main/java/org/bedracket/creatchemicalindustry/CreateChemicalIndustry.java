@@ -23,7 +23,8 @@ public class CreateChemicalIndustry {
         ModConfigs.loadConfig(ModConfigs.SPEC, FMLPaths.CONFIGDIR.get().resolve("create_chemical_industry.toml"));
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
-        ModFluids.FLUIDS.register(modEventBus);
+        ModLiquids.LIQUIDS.register(modEventBus);
+        ModGases.GASES.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         LOGGER.info("Create Chemical Industry Mod has been loaded successfully!");
     }
