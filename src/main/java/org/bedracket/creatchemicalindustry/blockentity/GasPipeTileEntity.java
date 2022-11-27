@@ -32,7 +32,7 @@ public class GasPipeTileEntity extends SmartTileEntity implements SimpleWaterlog
     }
 
     public void transform(StructureTransform transform) {
-        BracketedTileEntityBehaviour bracketBehaviour = (BracketedTileEntityBehaviour)this.getBehaviour(BracketedTileEntityBehaviour.TYPE);
+        BracketedTileEntityBehaviour bracketBehaviour = this.getBehaviour(BracketedTileEntityBehaviour.TYPE);
         if (bracketBehaviour != null) {
             bracketBehaviour.transformBracket(transform);
         }
