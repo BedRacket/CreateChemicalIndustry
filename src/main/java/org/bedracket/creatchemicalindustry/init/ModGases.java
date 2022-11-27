@@ -12,6 +12,6 @@ public class ModGases {
     public static final GasDeferredRegister GASES = new GasDeferredRegister(CreateChemicalIndustry.MOD_ID);
 
     public static final GasRegistryObject<Source, Flowing, LiquidBlock, BucketItem> ETHANOL_GAS
-            = GASES.registerLiquidChemical("ethanol_gas", 0xFFFFFFFF, 0, 300F, 0.789F);
+            = GASES.registerLiquidChemical("ethanol_gas", 0x55FFFFFF, 0, 300F, 0.789F);
 
 }

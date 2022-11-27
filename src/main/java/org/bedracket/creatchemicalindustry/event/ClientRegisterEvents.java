@@ -22,6 +22,10 @@ public class ClientRegisterEvents {
                 renderType -> renderType == RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModLiquids.FERMENTATION_BROTH.getFlowingFluid(),
                 renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModLiquids.IMPURE_ETHANOL.getFluid(),
+                renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModLiquids.IMPURE_ETHANOL.getFlowingFluid(),
+                renderType -> renderType == RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModGases.ETHANOL_GAS.getFluid(),
                 renderType -> renderType == RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModGases.ETHANOL_GAS.getFlowingFluid(),
