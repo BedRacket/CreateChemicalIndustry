@@ -9,18 +9,13 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class GlassJarTileEntity  extends SmartTileEntity implements IHaveGoggleInformation {
-    private boolean contentsChanged;
-    public GlassJarTileEntity() {
-        super(null, null, null);
+public class GlassJarTileEntity extends SmartTileEntity implements IHaveGoggleInformation {
+    public GlassJarTileEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
 
     @Override
     public void addBehaviours(List<TileEntityBehaviour> list) {
 
-    }
-
-    public void notifyChangeOfContents() {
-        this.contentsChanged = true;
     }
 }
