@@ -41,8 +41,8 @@ import java.util.function.UnaryOperator;
 public class GasDeferredRegister {
 
     private static final ResourceLocation OVERLAY = new ResourceLocation("minecraft", "block/water_overlay");
-    private static final ResourceLocation LIQUID = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "liquid/liquid");
-    private static final ResourceLocation LIQUID_FLOW = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "liquid/liquid_flow");
+    private static final ResourceLocation GAS = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "liquid/liquid");
+    private static final ResourceLocation GAS_FLOW = new ResourceLocation(CreateChemicalIndustry.MOD_ID, "liquid/liquid_flow");
     //Copy of/based off of vanilla's lava/water bucket dispense behavior
     private static final DispenseItemBehavior BUCKET_DISPENSE_BEHAVIOR = new DefaultDispenseItemBehavior() {
         @Nonnull
@@ -60,7 +60,7 @@ public class GasDeferredRegister {
     };
 
     public static FluidAttributes.Builder getMekBaseBuilder() {
-        return getMekBaseBuilder(LIQUID, LIQUID_FLOW);
+        return getMekBaseBuilder(GAS, GAS_FLOW);
     }
 
     public static FluidAttributes.Builder getMekBaseBuilder(ResourceLocation still, ResourceLocation flowing) {
