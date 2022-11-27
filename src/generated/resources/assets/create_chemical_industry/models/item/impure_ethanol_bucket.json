@@ -1,0 +1,5 @@
+{
+  "parent": "forge:item/bucket",
+  "loader": "forge:bucket",
+  "fluid": "create_chemical_industry:impure_ethanol"
+}

@@ -15,6 +15,9 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES,
                     CreateChemicalIndustry.MOD_ID);
+/**
+    public static final RegistryObject<BlockEntityType<GlassJarTileEntity>> GLASS_JAR_TILE_ENTITY =
+            register()*/
 
     public static final RegistryObject<BlockEntityType<GlassJarTileEntity>> GLASS_JAR
             = register("glass_jar", GlassJarTileEntity::new);
