@@ -1,13 +1,14 @@
 package org.bedracket.creatchemicalindustry.register;
 
-import java.util.Objects;
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraftforge.registries.RegistryObject;
-import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Source;
 import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Flowing;
+import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Source;
+
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 /**
  * Code from Mekanism/src/api/java/mekanism/api/providers/IFluidProvider.java

@@ -3,8 +3,8 @@ package org.bedracket.creatchemicalindustry.init;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.level.block.LiquidBlock;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Source;
 import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Flowing;
+import org.bedracket.creatchemicalindustry.gas.CCIFlowingGas.Source;
 import org.bedracket.creatchemicalindustry.register.GasDeferredRegister;
 import org.bedracket.creatchemicalindustry.register.GasRegistryObject;
 

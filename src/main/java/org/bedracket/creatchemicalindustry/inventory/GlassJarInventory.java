@@ -1,6 +1,5 @@
 package org.bedracket.creatchemicalindustry.inventory;
 
-import com.simibubi.create.content.contraptions.processing.BasinTileEntity;
 import com.simibubi.create.foundation.item.SmartInventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -27,7 +26,7 @@ public class GlassJarInventory extends SmartInventory {
     public ItemStack extractItem(int slot, int amount, boolean simulate) {
         ItemStack extractItem = super.extractItem(slot, amount, simulate);
         if (!simulate && !extractItem.isEmpty()) {
-            this.glassJarTileEntity.notifyChangeOfContents();
+            this.glassJarTileEntity.notifyUpdate();
         }
 
         return extractItem;

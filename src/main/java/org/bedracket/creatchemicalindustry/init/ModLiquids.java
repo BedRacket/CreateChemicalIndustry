@@ -2,9 +2,9 @@ package org.bedracket.creatchemicalindustry.init;
 
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.level.block.LiquidBlock;
-import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
+import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.register.LiquidDeferredRegister;
 import org.bedracket.creatchemicalindustry.register.LiquidRegistryObject;
 

@@ -4,8 +4,8 @@ import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.material.Fluids;
-import org.bedracket.creatchemicalindustry.init.ModLiquids;
 import org.bedracket.creatchemicalindustry.init.ModItems;
+import org.bedracket.creatchemicalindustry.init.ModLiquids;
 import org.jetbrains.annotations.NotNull;
 
 public class CCIMixingRecipeGen extends CCIProcessingRecipeGen{

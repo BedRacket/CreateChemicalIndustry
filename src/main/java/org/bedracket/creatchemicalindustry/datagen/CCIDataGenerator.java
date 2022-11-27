@@ -8,7 +8,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.init.ModItems;
-import org.bedracket.creatchemicalindustry.init.ModLiquids;
 
 @Mod.EventBusSubscriber(modid = CreateChemicalIndustry.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CCIDataGenerator {

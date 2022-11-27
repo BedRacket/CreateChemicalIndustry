@@ -12,7 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
-import org.bedracket.creatchemicalindustry.init.ModItems;
+import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
@@ -100,6 +100,6 @@ public class CCIItemModelProvider extends ItemModelProvider {
      * skipItems(ModItems.EXAMPLE_ITEM.get());
      */
     protected void addSkipItems()  {
-
+        skipItems(ModBlocks.GLASS_JAR.get().asItem());
     }
 }
