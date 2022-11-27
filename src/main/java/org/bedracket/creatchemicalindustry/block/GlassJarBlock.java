@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import org.bedracket.creatchemicalindustry.blockentity.GlassJarTileEntity;
+import org.bedracket.creatchemicalindustry.init.ModBlockEntities;
 
 public class GlassJarBlock extends Block implements ITE<GlassJarTileEntity>, IWrenchable {
 
@@ -39,6 +40,6 @@ public class GlassJarBlock extends Block implements ITE<GlassJarTileEntity>, IWr
 
     @Override
     public BlockEntityType getTileEntityType() {
-        return null;
+        return ModBlockEntities.GLASS_JAR.get();
     }
 }
