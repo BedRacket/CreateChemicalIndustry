@@ -22,6 +22,7 @@ public class CCIDataGenerator {
         generator.addProvider(new CCIItemModelProvider(generator, helper, ModItems.ITEMS));
         generator.addProvider(new CCIBucketItemModelProvider(generator, helper));
         generator.addProvider(new CCILiquidStateProvider(generator, helper));
+        generator.addProvider(new CCIBlockModelProvider(generator, helper));
         generator.addProvider(new CCILanguageProvider(generator, "en_us"));
         generator.addProvider(new CCILanguageProviderZH(generator, "zh_cn"));
     }
