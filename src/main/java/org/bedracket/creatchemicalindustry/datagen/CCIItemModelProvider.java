@@ -5,7 +5,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.TieredItem;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.DeferredRegister;
@@ -33,7 +32,12 @@ public class CCIItemModelProvider extends ItemModelProvider {
     }
 
     private static String name(Item item) {
-        return ForgeRegistries.ITEMS.getKey(item).getPath();
+        ResourceLocation identifier = ForgeRegistries.ITEMS.getKey(item);
+        if (identifier == null) {
+            return null;
+        } else {
+            return identifier.getPath();
+        }
     }
 
     @Override
@@ -76,22 +80,22 @@ public class CCIItemModelProvider extends ItemModelProvider {
                 .forEach(this::handheldItem);
     }
 
-    protected final ItemModelBuilder generatedItem(String name) {
-        return withExistingParent(name, GENERATED)
+    protected final void generatedItem(String name) {
+        withExistingParent(name, GENERATED)
                 .texture("layer0", modLoc("item/" + name));
     }
 
-    protected final ItemModelBuilder generatedItem(Item item) {
-        return generatedItem(name(item));
+    protected final void generatedItem(Item item) {
+        generatedItem(name(item));
     }
 
-    protected final ItemModelBuilder handheldItem(String name) {
-        return withExistingParent(name, HANDHELD)
+    protected final void handheldItem(String name) {
+        withExistingParent(name, HANDHELD)
                 .texture("layer0", modLoc("item/" + name));
     }
 
-    protected final ItemModelBuilder handheldItem(Item item) {
-        return handheldItem(name(item));
+    protected final void handheldItem(Item item) {
+        handheldItem(name(item));
     }
 
     /**

@@ -3,6 +3,7 @@ package org.bedracket.creatchemicalindustry.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 import org.bedracket.creatchemicalindustry.init.ModLiquids;
 
@@ -23,5 +24,7 @@ public class CCILanguageProviderZH extends LanguageProvider {
         add(ModLiquids.ETHANOL.getBlock(), "乙醇流体");
         add(ModLiquids.ETHANOL.getBucket(), "乙醇流体桶");
         add("itemGroup.create_chemical_industry.material", "机械动力化学工艺丨材料");
+        add("itemGroup.create_chemical_industry.facility", "设备");
+        add(ModBlocks.GLASS_JAR.get(), "玻璃罐");
     }
 }
