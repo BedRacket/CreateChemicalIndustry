@@ -131,6 +131,7 @@ dependencies {
 
 jar {
     exclude(".cache/**")
+    exclude("org/bedracket/creatchemicalindustry/datagen/**")
     manifest {
         attributes([
                 "Specification-Title"     : project.mod_id,
