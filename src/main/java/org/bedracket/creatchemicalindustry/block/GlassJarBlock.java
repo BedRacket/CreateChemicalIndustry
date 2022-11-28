@@ -53,13 +53,13 @@ public class GlassJarBlock extends BasinBlock {
         return false;
     }
 
-    @Override
-    public Class getTileEntityClass() {
-        return GlassJarTileEntity.class;
-    }
-
-    @Override
-    public BlockEntityType getTileEntityType() {
-        return ModBlockEntities.GLASS_JAR.get();
-    }
+//    @Override
+//    public Class getTileEntityClass() {
+//        return GlassJarTileEntity.class;
+//    }
+//
+//    @Override
+//    public BlockEntityType getTileEntityType() {
+//        return ModBlockEntities.GLASS_JAR.get();
+//    }
 }
