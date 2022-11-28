@@ -17,7 +17,7 @@ public class ModTabs {
         @NotNull
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.CALCIUM_CARBONATE_DUST.get());
+            return new ItemStack(ModBlocks.GLASS_JAR.get());
         }
     };
 }

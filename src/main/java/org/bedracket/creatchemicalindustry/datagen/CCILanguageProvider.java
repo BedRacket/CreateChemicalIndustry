@@ -3,6 +3,7 @@ package org.bedracket.creatchemicalindustry.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.bedracket.creatchemicalindustry.init.ModItems;
 import org.bedracket.creatchemicalindustry.init.ModLiquids;
 
@@ -25,5 +26,7 @@ public class CCILanguageProvider extends LanguageProvider {
         add(ModLiquids.FERMENTATION_BROTH.getBlock(), "Fermentation Broth");
         add(ModLiquids.FERMENTATION_BROTH.getBucket(), "Fermentation Broth Bucket");
         add("itemGroup.create_chemical_industry.material", "Material");
+        add("itemGroup.create_chemical_industry.facility", "Facility");
+        add(ModBlocks.GLASS_JAR.get(), "Glass Jar");
     }
 }
