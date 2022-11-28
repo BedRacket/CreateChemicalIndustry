@@ -3,15 +3,25 @@ package org.bedracket.creatchemicalindustry.event;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import org.bedracket.creatchemicalindustry.client.renderer.GlassJarRenderer;
+import org.bedracket.creatchemicalindustry.init.ModBlockEntities;
 import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.bedracket.creatchemicalindustry.init.ModGases;
 import org.bedracket.creatchemicalindustry.init.ModLiquids;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientRegisterEvents {
+
+    @SubscribeEvent
+    public static void registerRender(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(
+                ModBlockEntities.GLASS_JAR.get(),
+                GlassJarRenderer::new);
+    }
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
