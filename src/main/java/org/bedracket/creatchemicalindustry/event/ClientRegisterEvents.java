@@ -6,6 +6,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.bedracket.creatchemicalindustry.init.ModGases;
 import org.bedracket.creatchemicalindustry.init.ModLiquids;
 
@@ -30,5 +31,7 @@ public class ClientRegisterEvents {
                 renderType -> renderType == RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModGases.ETHANOL_GAS.getFlowingFluid(),
                 renderType -> renderType == RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GLASS_JAR.get(),
+                renderType -> renderType == RenderType.cutout());
     }
 }
