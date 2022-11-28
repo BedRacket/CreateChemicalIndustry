@@ -1,9 +1,12 @@
 package org.bedracket.creatchemicalindustry.block;
 
+import com.simibubi.create.AllShapes;
+import com.simibubi.create.content.contraptions.processing.BasinBlock;
 import com.simibubi.create.content.contraptions.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.ITE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -11,10 +14,19 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.EntityCollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.bedracket.creatchemicalindustry.blockentity.GlassJarTileEntity;
 import org.bedracket.creatchemicalindustry.init.ModBlockEntities;
+import org.bedracket.creatchemicalindustry.init.ModShapes;
 
-public class GlassJarBlock extends Block implements ITE<GlassJarTileEntity>, IWrenchable {
+/**
+ * Code from com\simibubi\create\content\contraptions\processing\BasinTileEntity.java
+ * @author Creators-of-Create <a href="https://github.com/Creators-of-Create/Create">...</a>
+ * @license MIT
+ */
+public class GlassJarBlock extends BasinBlock {
 
     public GlassJarBlock() {
         super(BlockBehaviour.Properties.of(Material.GLASS)
@@ -23,6 +35,14 @@ public class GlassJarBlock extends Block implements ITE<GlassJarTileEntity>, IWr
                 .isRedstoneConductor(GlassJarBlock::never)
                 .isSuffocating(GlassJarBlock::never)
                 .isViewBlocking(GlassJarBlock::never));
+    }
+
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        return ModShapes.GLASS_JAR_SHAPE;
+    }
+
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
+        return ctx instanceof EntityCollisionContext && ((EntityCollisionContext)ctx).getEntity() instanceof ItemEntity ? ModShapes.GLASS_JAR_SHAPE : this.getShape(state, reader, pos, ctx);
     }
 
     private static boolean never(BlockState state, BlockGetter blockGetter, BlockPos blockPos) {

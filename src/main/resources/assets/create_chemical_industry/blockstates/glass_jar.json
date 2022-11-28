@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "create_chemical_industry:block/glass_jar"
+    },
+    "facing=north": {
+      "model": "create_chemical_industry:block/glass_jar",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "create_chemical_industry:block/glass_jar"
+    },
+    "facing=west": {
+      "model": "create_chemical_industry:block/glass_jar",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "create_chemical_industry:block/glass_jar",
+      "y": 270
+    }
+  }
+}
