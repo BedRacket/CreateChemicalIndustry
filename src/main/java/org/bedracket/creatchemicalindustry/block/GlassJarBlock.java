@@ -1,11 +1,17 @@
 package org.bedracket.creatchemicalindustry.block;
 
 import com.simibubi.create.content.contraptions.processing.BasinBlock;
+import com.simibubi.create.content.contraptions.relays.belt.BeltTileEntity;
+import com.simibubi.create.content.logistics.block.funnel.FunnelBlock;
+import com.simibubi.create.foundation.tileEntity.TileEntityBehaviour;
+import com.simibubi.create.foundation.tileEntity.behaviour.belt.DirectBeltInputBehaviour;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -46,6 +52,10 @@ public class GlassJarBlock extends BasinBlock {
     }
 
     private static boolean never(BlockState state, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
+        return false;
+    }
+
+    public static boolean canOutputTo(BlockGetter world, BlockPos basinPos, Direction direction) {
         return false;
     }
 
