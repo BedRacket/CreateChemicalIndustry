@@ -10,8 +10,8 @@
 	"elements": [
 		{
 			"name": "Side1",
-			"from": [0, 0, 0],
-			"to": [2, 14, 16],
+			"from": [0, 1, 0],
+			"to": [2, 15, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 24, 8]},
 			"faces": {
 				"north": {"uv": [14, 2, 16, 16], "texture": "#2"},
@@ -23,7 +23,7 @@
 			}
 		},
 		{
-			"name": "GlassJarBottom",
+			"name": "GlassJarTop",
 			"from": [2, 14, 2],
 			"to": [14, 16, 14],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 25, 8]},
@@ -37,9 +37,23 @@
 			}
 		},
 		{
+			"name": "GlassJarBottom",
+			"from": [2, 0, 2],
+			"to": [14, 2, 14],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 25, 8]},
+			"faces": {
+				"north": {"uv": [14, 12, 2, 14], "texture": "#1"},
+				"east": {"uv": [14, 2, 12, 14], "rotation": 270, "texture": "#1"},
+				"south": {"uv": [2, 4, 14, 2], "texture": "#1"},
+				"west": {"uv": [4, 14, 2, 2], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#1"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#1"}
+			}
+		},
+		{
 			"name": "Side4",
-			"from": [2, 0, 0],
-			"to": [14, 14, 2],
+			"from": [2, 1, 0],
+			"to": [14, 15, 2],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 24, 8]},
 			"faces": {
 				"north": {"uv": [2, 2, 14, 16], "texture": "#0"},
@@ -52,8 +66,8 @@
 		},
 		{
 			"name": "Side2",
-			"from": [2, 0, 14],
-			"to": [14, 14, 16],
+			"from": [2, 1, 14],
+			"to": [14, 15, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 24, 8]},
 			"faces": {
 				"north": {"uv": [2, 2, 14, 16], "texture": "#0"},
@@ -66,8 +80,8 @@
 		},
 		{
 			"name": "Side3",
-			"from": [14, 0, 0],
-			"to": [16, 14, 16],
+			"from": [14, 1, 0],
+			"to": [16, 15, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 40, 8]},
 			"faces": {
 				"north": {"uv": [0, 2, 2, 16], "texture": "#2"},
@@ -84,7 +98,7 @@
 			"name": "glass jar",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"children": [0, 1, 2, 3, 4]
+			"children": [0, 1, 2, 3, 4, 5]
 		}
 	]
 }

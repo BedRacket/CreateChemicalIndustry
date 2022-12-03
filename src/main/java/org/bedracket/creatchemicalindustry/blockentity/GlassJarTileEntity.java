@@ -55,22 +55,4 @@ public class GlassJarTileEntity extends BasinTileEntity {
         }
     }
 
-    public void tick() {
-        super.tick();
-        if (level.getBlockState(this.getBlockPos().below()).is(Blocks.AIR)) {
-            if (!this.inputInventory.isEmpty()) {
-                clearItemInventory(this.inputInventory);
-            }
-            if (!this.outputInventory.isEmpty()) {
-                clearItemInventory(this.outputInventory);
-            }
-            if (!this.inputTank.isEmpty()) {
-                clearFluidInventory(this.inputTank);
-            }
-            if (!this.outputTank.isEmpty()) {
-                clearFluidInventory(this.outputTank);
-            }
-        }
-    }
-
 }
