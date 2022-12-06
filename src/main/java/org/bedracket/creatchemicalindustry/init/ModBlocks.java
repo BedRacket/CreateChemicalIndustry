@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.block.GlassCoverBlock;
 import org.bedracket.creatchemicalindustry.block.GlassJarBlock;
 import org.jetbrains.annotations.Nullable;
 
@@ -45,6 +46,7 @@ public class ModBlocks {
     }
 
     public static RegistryObject<Block> GLASS_JAR = registerFacility("glass_jar", GlassJarBlock::new);
+    public static RegistryObject<Block> GLASS_COVER = registerFacility("glass_cover", GlassCoverBlock::new);
 
     private static <T extends Block> RegistryObject<T> registerFacility(String name, Supplier<T> blockSupplier) {
         return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties().tab(ModTabs.FACILITY)));

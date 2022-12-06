@@ -5,6 +5,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
+import org.bedracket.creatchemicalindustry.blockentity.GlassCoverTileEntity;
 import org.bedracket.creatchemicalindustry.blockentity.GlassJarTileEntity;
 
 import java.util.Locale;
@@ -20,6 +21,10 @@ public class ModBlockEntities {
             register("glass_jar",
             () -> BlockEntityType.Builder.of(GlassJarTileEntity::new,
                     ModBlocks.GLASS_JAR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<GlassCoverTileEntity>> GLASS_COVER =
+            register("glass_cover",
+                    () -> BlockEntityType.Builder.of(GlassCoverTileEntity::new,
+                            ModBlocks.GLASS_COVER.get()).build(null));
 
     /**
      * Used for registry items
