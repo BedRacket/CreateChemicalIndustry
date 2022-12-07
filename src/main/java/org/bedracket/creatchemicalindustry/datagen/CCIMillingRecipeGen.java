@@ -27,9 +27,4 @@ public class CCIMillingRecipeGen extends CCIProcessingRecipeGen{
     protected AllRecipeTypes getRecipeType() {
         return AllRecipeTypes.MILLING;
     }
-
-    @Override
-    public @NotNull String getName() {
-        return "Create: Chemical Industry's Milling Recipes";
-    }
 }

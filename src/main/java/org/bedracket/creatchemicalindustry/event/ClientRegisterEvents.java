@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import org.bedracket.creatchemicalindustry.client.renderer.GlassJarRenderer;
+import org.bedracket.creatchemicalindustry.client.renderer.SimpleNuclearReactorRenderer;
 import org.bedracket.creatchemicalindustry.init.ModBlockEntities;
 import org.bedracket.creatchemicalindustry.init.ModBlocks;
 import org.bedracket.creatchemicalindustry.init.ModGases;
@@ -21,6 +22,9 @@ public class ClientRegisterEvents {
         event.registerBlockEntityRenderer(
                 ModBlockEntities.GLASS_JAR.get(),
                 GlassJarRenderer::new);
+        event.registerBlockEntityRenderer(
+                ModBlockEntities.SIMPLE_NUCLEAR_REACTOR.get(),
+                SimpleNuclearReactorRenderer::new);
     }
 
     @SubscribeEvent

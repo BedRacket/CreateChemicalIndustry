@@ -7,6 +7,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.blockentity.GlassCoverTileEntity;
 import org.bedracket.creatchemicalindustry.blockentity.GlassJarTileEntity;
+import org.bedracket.creatchemicalindustry.blockentity.SimpleNuclearReactorTileEntity;
 
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -25,6 +26,10 @@ public class ModBlockEntities {
             register("glass_cover",
                     () -> BlockEntityType.Builder.of(GlassCoverTileEntity::new,
                             ModBlocks.GLASS_COVER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<SimpleNuclearReactorTileEntity>> SIMPLE_NUCLEAR_REACTOR =
+            register("simple_nuclear_reactor",
+                    () -> BlockEntityType.Builder.of(SimpleNuclearReactorTileEntity::new,
+                            ModBlocks.SIMPLE_NUCLEAR_REACTOR.get()).build(null));
 
     /**
      * Used for registry items

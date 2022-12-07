@@ -33,9 +33,4 @@ public class CCICrushingRecipeGen extends CCIProcessingRecipeGen{
     protected AllRecipeTypes getRecipeType() {
         return AllRecipeTypes.CRUSHING;
     }
-
-    @Override
-    public @NotNull String getName() {
-        return "Create: Chemical Industry's Crushing Recipes";
-    }
 }

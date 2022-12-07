@@ -9,6 +9,8 @@ import net.minecraftforge.registries.RegistryObject;
 import org.bedracket.creatchemicalindustry.CreateChemicalIndustry;
 import org.bedracket.creatchemicalindustry.block.GlassCoverBlock;
 import org.bedracket.creatchemicalindustry.block.GlassJarBlock;
+import org.bedracket.creatchemicalindustry.block.SimpleNuclearReactorBlock;
+import org.bedracket.creatchemicalindustry.blockentity.SimpleNuclearReactorTileEntity;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
@@ -47,6 +49,8 @@ public class ModBlocks {
 
     public static RegistryObject<Block> GLASS_JAR = registerFacility("glass_jar", GlassJarBlock::new);
     public static RegistryObject<Block> GLASS_COVER = registerFacility("glass_cover", GlassCoverBlock::new);
+
+    public static RegistryObject<Block> SIMPLE_NUCLEAR_REACTOR = registerFacility("simple_nuclear_reactor", SimpleNuclearReactorBlock::new);
 
     private static <T extends Block> RegistryObject<T> registerFacility(String name, Supplier<T> blockSupplier) {
         return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties().tab(ModTabs.FACILITY)));

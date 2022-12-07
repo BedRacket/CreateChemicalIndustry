@@ -21,7 +21,8 @@ public class ModItems {
     public static final RegistryObject<Item> CALCIUM_CARBONATE_DUST = material("calcium_carbonate_dust");
     public static final RegistryObject<Item> CALCIUM_OXIDE_DUST = material("calcium_oxide_dust");
     public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
-
+    public static final RegistryObject<Item> SIMPLE_URANIUM_FUEL_ROD = material("simple_uranium_fuel_rod");
+    public static final RegistryObject<Item> FAKE_URANIUM_FUEL = material("fake_uranium_fuel");
 
     /**
      * Used for registry items

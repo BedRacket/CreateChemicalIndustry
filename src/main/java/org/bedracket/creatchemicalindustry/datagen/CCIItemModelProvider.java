@@ -105,5 +105,6 @@ public class CCIItemModelProvider extends ItemModelProvider {
      */
     protected void addSkipItems()  {
         skipItems(ModBlocks.GLASS_JAR.get().asItem());
+        skipItems(ModBlocks.SIMPLE_NUCLEAR_REACTOR.get().asItem());
     }
 }

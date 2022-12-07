@@ -18,6 +18,7 @@ public class CCIBlockItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleParent(ModBlocks.GLASS_JAR.get());
+        simpleParent(ModBlocks.SIMPLE_NUCLEAR_REACTOR.get());
     }
 
     protected void simpleParent(Block block) {

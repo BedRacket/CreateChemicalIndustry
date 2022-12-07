@@ -17,11 +17,6 @@ public class CCIMixingRecipeGen extends CCIProcessingRecipeGen{
                 .output(ModLiquids.FERMENTATION_BROTH.getFluid(), 100);
     });
 
-    public CreateRecipeProvider.GeneratedRecipe IMPURE_ETHANOL = create(ModLiquids.IMPURE_ETHANOL.getStillFluid().getRegistryName(), (b) -> {
-        return b.duration(100).require(ModLiquids.FERMENTATION_BROTH.getFluid(), 100)
-                .output(ModLiquids.IMPURE_ETHANOL.getFluid(), 1);
-    });
-
     public CCIMixingRecipeGen(DataGenerator generator) {
         super(generator);
     }
@@ -29,10 +24,5 @@ public class CCIMixingRecipeGen extends CCIProcessingRecipeGen{
     @Override
     protected AllRecipeTypes getRecipeType() {
         return AllRecipeTypes.MIXING;
-    }
-
-    @Override
-    public @NotNull String getName() {
-        return "Create: Chemical Industry's Mixing Recipes";
     }
 }
