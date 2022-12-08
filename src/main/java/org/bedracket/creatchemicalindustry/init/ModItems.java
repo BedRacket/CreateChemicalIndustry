@@ -23,7 +23,7 @@ public class ModItems {
     public static final RegistryObject<Item> IMPURITY = material("impurity_dust");
     public static final RegistryObject<Item> SIMPLE_URANIUM_FUEL_ROD = material("simple_uranium_fuel_rod");
     public static final RegistryObject<Item> FAKE_URANIUM_FUEL = material("fake_uranium_fuel");
-
+//    public static final RegistryObject<Item> SINGLE_NUCLEAR_FUEL_CLADDING = material("single_fuel_cladding");
     /**
      * Used for registry items
      * @param name Items' registry name

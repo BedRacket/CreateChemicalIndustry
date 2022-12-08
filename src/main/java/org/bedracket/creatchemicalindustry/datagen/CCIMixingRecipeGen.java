@@ -1,6 +1,7 @@
 package org.bedracket.creatchemicalindustry.datagen;
 
 import com.simibubi.create.AllRecipeTypes;
+import com.simibubi.create.content.contraptions.processing.HeatCondition;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.material.Fluids;

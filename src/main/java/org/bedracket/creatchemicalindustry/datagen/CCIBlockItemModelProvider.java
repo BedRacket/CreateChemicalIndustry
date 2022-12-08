@@ -18,7 +18,7 @@ public class CCIBlockItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleParent(ModBlocks.GLASS_JAR.get());
-        simpleParent(ModBlocks.SIMPLE_NUCLEAR_REACTOR.get());
+        multiParent(ModBlocks.SIMPLE_NUCLEAR_REACTOR.get(), "horizontal");
     }
 
     protected void simpleParent(Block block) {
@@ -26,6 +26,19 @@ public class CCIBlockItemModelProvider extends ItemModelProvider {
         if (identifier!= null) {
             String path = identifier.getPath();
             withExistingParent(path, "create_chemical_industry:block/" + path);
+        }
+    }
+
+    /**
+     * When one block has many models, specify one of them in the directory
+     * @param block Block instance
+     * @param name specific name of a single model
+     */
+    protected void multiParent(Block block, String name) {
+        ResourceLocation identifier = ForgeRegistries.BLOCKS.getKey(block);
+        if (identifier!= null) {
+            String path = identifier.getPath();
+            withExistingParent(path, "create_chemical_industry:block/"+ path + "/" + name);
         }
     }
 }

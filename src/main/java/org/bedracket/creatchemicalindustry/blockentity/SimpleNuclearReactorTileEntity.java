@@ -53,9 +53,9 @@ public class SimpleNuclearReactorTileEntity extends GeneratingKineticTileEntity 
         if (level != null) {
             return level.getBlockState(worldPosition).getValue(SimpleNuclearReactorBlock.notWatered) &&
                     level.getBlockState(worldPosition).getValue(SimpleNuclearReactorBlock.notFueled)
-                    ? 0 : convertToDirection((float)this.generatedSpeed.getValue(), (Direction)this.getBlockState().getValue(SimpleNuclearReactorBlock.FACING));
+                    ? 0.0F : convertToDirection((float)this.generatedSpeed.getValue(), (Direction)this.getBlockState().getValue(SimpleNuclearReactorBlock.FACING));
         }
-        return 0;
+        return 0.0F;
     }
 
     public static int step(ScrollValueBehaviour.StepContext context) {

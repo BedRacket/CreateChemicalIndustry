@@ -1,5 +1,6 @@
 package org.bedracket.creatchemicalindustry.event;
 
+import com.simibubi.create.content.contraptions.components.motor.CreativeMotorRenderer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,6 +47,8 @@ public class ClientRegisterEvents {
         ItemBlockRenderTypes.setRenderLayer(ModGases.ETHANOL_GAS.getFlowingFluid(),
                 renderType -> renderType == RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GLASS_JAR.get(),
+                renderType -> renderType == RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SIMPLE_NUCLEAR_REACTOR.get(),
                 renderType -> renderType == RenderType.cutout());
     }
 }

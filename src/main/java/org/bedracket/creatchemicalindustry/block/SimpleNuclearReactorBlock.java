@@ -47,7 +47,6 @@ public class SimpleNuclearReactorBlock extends DirectionalKineticBlock implement
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         ItemStack heldItem = pPlayer.getItemInHand(pHand);
-        System.out.println(pState.getValue(notFueled));
         if (heldItem.is(ModItems.SIMPLE_URANIUM_FUEL_ROD.get()) && pState.getValue(notFueled)) {
             pLevel.setBlock(pPos, pState.setValue(notFueled, false), 3);
             heldItem.setCount(heldItem.getCount() - 1);

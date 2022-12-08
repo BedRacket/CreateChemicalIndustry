@@ -18,5 +18,5 @@ public class ModLiquids {
             = LIQUIDS.registerLiquidChemical("impure_ethanol", 0xFFFFFFBB, 0, 300F, 0.789F);
 
     public static final LiquidRegistryObject<Source, Flowing, LiquidBlock, BucketItem> FERMENTATION_BROTH
-            = LIQUIDS.registerLiquidChemical("fermentation_broth", 0xFF00DD00, 0, 300F, 1F);
+            = LIQUIDS.registerLiquidChemical("fermentation_broth", 0xFF00DD00, 0, 300F, 100F);
 }

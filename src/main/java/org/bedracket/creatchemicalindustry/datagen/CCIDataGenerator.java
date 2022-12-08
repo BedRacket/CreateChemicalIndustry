@@ -19,7 +19,7 @@ public class CCIDataGenerator {
         generator.addProvider(new CCICrushingRecipeGen(generator));
         generator.addProvider(new CCIMillingRecipeGen(generator));
         generator.addProvider(new CCIMixingRecipeGen(generator));
-        generator.addProvider(new CCIPressingRecipeGen(generator));
+        generator.addProvider(new CCICompactingRecipeGen(generator));
         generator.addProvider(new CCIItemModelProvider(generator, helper, ModItems.ITEMS));
         generator.addProvider(new CCIBucketItemModelProvider(generator, helper));
         generator.addProvider(new CCILiquidStateProvider(generator, helper));

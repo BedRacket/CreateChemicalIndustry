@@ -1,25 +1,25 @@
 {
   "variants": {
     "facing=down": {
-      "model": "create_chemical_industry:block/simple_nuclear_reactor",
+      "model": "create_chemical_industry:block/simple_nuclear_reactor/vertical",
       "x": 180
     },
     "facing=up": {
-      "model": "create_chemical_industry:block/simple_nuclear_reactor"
+      "model": "create_chemical_industry:block/simple_nuclear_reactor/vertical"
     },
     "facing=north": {
-      "model": "create_chemical_industry:block/simple_nuclear_reactor",
+      "model": "create_chemical_industry:block/simple_nuclear_reactor/horizontal",
       "y": 180
     },
     "facing=south": {
-      "model": "create_chemical_industry:block/simple_nuclear_reactor"
+      "model": "create_chemical_industry:block/simple_nuclear_reactor/horizontal"
     },
     "facing=west": {
-      "model": "create_chemical_industry:block/simple_nuclear_reactor",
+      "model": "create_chemical_industry:block/simple_nuclear_reactor/horizontal",
       "y": 90
     },
     "facing=east": {
-      "model": "create_chemical_industry:block/simple_nuclear_reactor",
+      "model": "create_chemical_industry:block/simple_nuclear_reactor/horizontal",
       "y": 270
     }
   }
